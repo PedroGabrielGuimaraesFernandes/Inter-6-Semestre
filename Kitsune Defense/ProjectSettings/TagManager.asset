@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Objective
+  - Ground
+  - Wall
+  - Ground&Wall
+  - Trap
+  - Enemy
+  - Obstacle
+  - Orb
+  - TrapPlacer
+  - UIManager
+  - LevelManager
+  - Manager
+  - AudioManager
+  - Green Orb
+  - Yellow Orb
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - PostProcessing
+  - IgnoreNavmesh
+  - TrapPlacer
+  - Traps
+  - Minimapa
+  - Inimigos
+  - Drops
+  - Player
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
