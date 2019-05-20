@@ -2296,7 +2296,7 @@ MonoBehaviour:
   hp: 5
   Damage: 4
   WaitToAttack: 5
-  redSpirit: {fileID: 409007291138270811, guid: 9d430b445bb29c04bbc4348bd32a6e41,
+  redSpirit: {fileID: 409007291138270811, guid: c8bb8ca9030d7634e911b1d9232c9232,
     type: 3}
   CheckDistance: 20
   MoveSpeed: 4

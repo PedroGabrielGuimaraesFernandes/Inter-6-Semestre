@@ -88,9 +88,9 @@ TextureImporter:
       name: Mapa_0
       rect:
         serializedVersion: 2
-        x: 25
+        x: 22
         y: 17
-        width: 310
+        width: 336
         height: 372
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
