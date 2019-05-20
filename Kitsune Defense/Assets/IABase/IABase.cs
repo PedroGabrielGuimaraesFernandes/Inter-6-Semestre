@@ -21,6 +21,7 @@ public class IABase : MonoBehaviour
     [HideInInspector] public PlayerHPManager PlayerManagerScript;
     [HideInInspector] public MainObjectiveManager ObjctiveManagerScript;
     [HideInInspector] public bool AtkBool;
+    [HideInInspector] public WaypointSistem wayPointSistem;
 
     // Start is called before the first frame update
     public void InicialSetup()
@@ -32,6 +33,7 @@ public class IABase : MonoBehaviour
         Anim = gameObject.GetComponent<Animator>();
         PlayerManagerScript = PlayerObj.GetComponent<PlayerHPManager>();
         ObjctiveManagerScript = MainObjective.GetComponent<MainObjectiveManager>();
+        wayPointSistem = gameObject.GetComponent<WaypointSistem>();
 
         NavAgent.speed = MoveSpeed;
         Objective = MainObjective;   
@@ -43,7 +45,8 @@ public class IABase : MonoBehaviour
     }
     public void GoObjective()
     {
-        NavAgent.SetDestination(Objective.transform.position);
+        //NavAgent.SetDestination(Objective.transform.position);
+        wayPointSistem.MoveToObjective();
         Anim.SetBool("Moving", true);
         NavAgent.isStopped = false;
     }
@@ -95,7 +98,6 @@ public class IABase : MonoBehaviour
     {
         hp -= damage;
     }
-
     /*public void onFire(float dano)
     {
         Debug.Log("enemy burning");

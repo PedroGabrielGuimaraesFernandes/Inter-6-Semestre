@@ -19,6 +19,8 @@ TagManager:
   - AudioManager
   - Green Orb
   - Yellow Orb
+  - Fire
+  - wayManager
   layers:
   - Default
   - TransparentFX

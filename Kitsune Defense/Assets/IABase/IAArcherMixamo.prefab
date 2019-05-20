@@ -2235,6 +2235,7 @@ GameObject:
   - component: {fileID: 6631379742555157158}
   - component: {fileID: 4430807277375245901}
   - component: {fileID: 2650184090096906945}
+  - component: {fileID: 5967338678570490254}
   - component: {fileID: 6128228068377248525}
   m_Layer: 0
   m_Name: IAArcherMixamo
@@ -2332,6 +2333,20 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &5967338678570490254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7598464101206850400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dedabf6967a4ab48922a11d7489a146, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WayPoints: []
+  RandonRange: 5
 --- !u!136 &6128228068377248525
 CapsuleCollider:
   m_ObjectHideFlags: 0

@@ -634,6 +634,7 @@ GameObject:
   - component: {fileID: 2292851575942661922}
   - component: {fileID: 5059309192348279730}
   - component: {fileID: 2543300751993058579}
+  - component: {fileID: 4312802149273409305}
   - component: {fileID: 5566705351347587592}
   m_Layer: 13
   m_Name: IALancerMixamo
@@ -728,6 +729,20 @@ MonoBehaviour:
   PlayerManagerScript: {fileID: 0}
   ObjctiveManagerScript: {fileID: 0}
   AtkBool: 0
+--- !u!114 &4312802149273409305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2099381968079176109}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dedabf6967a4ab48922a11d7489a146, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WayPoints: []
+  RandonRange: 5
 --- !u!136 &5566705351347587592
 CapsuleCollider:
   m_ObjectHideFlags: 0

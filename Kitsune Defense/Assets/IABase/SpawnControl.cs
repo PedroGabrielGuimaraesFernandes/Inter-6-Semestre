@@ -32,6 +32,8 @@ public class SpawnControl : MonoBehaviour
 
     public GameUIManager gameUIManager;
 
+    [HideInInspector] public int WaveSide;
+
     void Start()
     {
         gameUIManager = GameObject.FindGameObjectWithTag("UIManager").GetComponent<GameUIManager>();
@@ -97,6 +99,14 @@ public class SpawnControl : MonoBehaviour
     public IEnumerator SpawnCorroutine(int onda)
     {
         GameObject Enemy;
+       /* if (waves[onda].useSpawnPoint1)
+        {
+            WaveSide = 1;
+        }
+        else
+        {
+           WaveSide = 2;
+        }*/
         while (waves[onda].totalQuantity > CurrentEnemyNumber)
         {
             if (waves[onda].useSpawnPoint1)
@@ -146,6 +156,8 @@ public class SpawnControl : MonoBehaviour
                     samuraiNumber++;
                 }
             }
+
+
                 yield return new WaitForSeconds(Time);
         }
         MainData.waitingNextWave = false;
