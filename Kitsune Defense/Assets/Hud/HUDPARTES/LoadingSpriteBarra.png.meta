@@ -1,7 +1,12 @@
 fileFormatVersion: 2
 guid: 44348636af3976943939f714b6817d49
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: LoadingSpriteBarra_0
+    21300002: LoadingSpriteBarra_1
+    21300004: LoadingSpriteBarra_2
+    21300006: LoadingSpriteBarra_3
+    21300008: LoadingSpriteBarra_4
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -40,7 +45,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -93,11 +98,111 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: LoadingSpriteBarra_0
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 0
+        width: 1467
+        height: 333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a941f0c37c6a1a349902f8a79d722c0f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LoadingSpriteBarra_1
+      rect:
+        serializedVersion: 2
+        x: 1631
+        y: 0
+        width: 1465
+        height: 333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be03147c1fc842e418d723851055b40d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LoadingSpriteBarra_2
+      rect:
+        serializedVersion: 2
+        x: 3214
+        y: 0
+        width: 1467
+        height: 333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5a06d8d09c6a3842b4eb718893bd985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LoadingSpriteBarra_3
+      rect:
+        serializedVersion: 2
+        x: 4747
+        y: 0
+        width: 1519
+        height: 333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30c9b0533036006409b1bfaaea28bb62
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LoadingSpriteBarra_4
+      rect:
+        serializedVersion: 2
+        x: 6384
+        y: 0
+        width: 1464
+        height: 333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e6388fa2e4a7ae4db8633f5df802c3a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: be0f095f920eac7499648d1d940f6709
     vertices: []
     indices: 
     edges: []

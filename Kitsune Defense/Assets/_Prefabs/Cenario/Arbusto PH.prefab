@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 8106205173379890784}
   - component: {fileID: 8106205173379890785}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Arbusto PH
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -59,7 +59,7 @@ GameObject:
   - component: {fileID: 8106205173827895277}
   - component: {fileID: 8106205173827895278}
   - component: {fileID: 8106205173827895279}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: block
   m_TagString: Untagged
   m_Icon: {fileID: 0}

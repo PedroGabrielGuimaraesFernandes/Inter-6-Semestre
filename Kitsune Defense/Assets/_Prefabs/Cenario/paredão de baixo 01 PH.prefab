@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8729021134200056113}
   - component: {fileID: 8729021134200056118}
   - component: {fileID: 8729021134200056119}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: bloco
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -404,9 +404,9 @@ GameObject:
   m_Component:
   - component: {fileID: 8729021135413611546}
   - component: {fileID: 8729021135413611547}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: "pared\xE3o de baixo 01 PH"
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

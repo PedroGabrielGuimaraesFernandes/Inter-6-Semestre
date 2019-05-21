@@ -5,9 +5,14 @@ using UnityEngine.UI;
 
 public class PlayerFunds : MonoBehaviour
 {
+
     public float playerFunds;
-    public TrapPlacer bank;
     public Text text;
+    public int redOrbGain = 5;
+    public int yellowOrbGain = 15;
+    public int greenOrbGain = 50;
+
+    private TrapPlacer bank;
 
 
     private void Start()
@@ -41,9 +46,17 @@ public class PlayerFunds : MonoBehaviour
 
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
-        if (hit.gameObject.CompareTag("Orb"))
+        if (hit.gameObject.CompareTag("Red Orb"))
         {
-            bank.AddFunds(5);
+            bank.AddFunds(redOrbGain);
+            // atualiza o hud 
+            AtualizarHud();
+
+            Destroy(hit.gameObject);
+        }
+        if (hit.gameObject.CompareTag("Yellow Orb"))
+        {
+            bank.AddFunds(yellowOrbGain);
             // atualiza o hud 
             AtualizarHud();
 
@@ -51,15 +64,7 @@ public class PlayerFunds : MonoBehaviour
         }
         if (hit.gameObject.CompareTag("Green Orb"))
         {
-            bank.AddFunds(15);
-            // atualiza o hud 
-            AtualizarHud();
-
-            Destroy(hit.gameObject);
-        }
-        if (hit.gameObject.CompareTag("Orb"))
-        {
-            bank.AddFunds(50);
+            bank.AddFunds(greenOrbGain);
             // atualiza o hud 
             AtualizarHud();
 

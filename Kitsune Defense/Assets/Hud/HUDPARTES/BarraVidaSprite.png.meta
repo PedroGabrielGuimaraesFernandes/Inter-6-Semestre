@@ -3,6 +3,11 @@ guid: 7216147c39d38ea4b92b01de2ca85ebb
 TextureImporter:
   fileIDToRecycleName:
     21300000: BarraVidaSprite_0
+    21300002: BarraVidaSprite_1
+    21300004: BarraVidaSprite_2
+    21300006: BarraVidaSprite_3
+    21300008: BarraVidaSprite_4
+    21300010: BarraVidaSprite_5
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -99,10 +104,10 @@ TextureImporter:
       name: BarraVidaSprite_0
       rect:
         serializedVersion: 2
-        x: 31
-        y: 13
-        width: 390
-        height: 28
+        x: 26
+        y: 11
+        width: 400
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -110,7 +115,107 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0231def7ba0ae0d49a43e000bec126c8
+      spriteID: 6f7d8b597711a034a9269d9927d80c63
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BarraVidaSprite_1
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 10
+        width: 400
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9be16d981b2d0441adb274cc3324d83
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BarraVidaSprite_2
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 11
+        width: 400
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b54132edd25583844bc72ef97f933a8c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BarraVidaSprite_3
+      rect:
+        serializedVersion: 2
+        x: 1340
+        y: 11
+        width: 400
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95fa220267801094cbf3a4a79a37df0e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BarraVidaSprite_4
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 10
+        width: 400
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3faae61c248813a488e02ef12821b2a4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BarraVidaSprite_5
+      rect:
+        serializedVersion: 2
+        x: 2217
+        y: 11
+        width: 400
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47d194a40e7803d42a8aabda574818be
       vertices: []
       indices: 
       edges: []

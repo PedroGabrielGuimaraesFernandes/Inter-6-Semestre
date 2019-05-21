@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 409007291138270808}
   m_Layer: 14
   m_Name: Yellow Orb
-  m_TagString: Orb
+  m_TagString: Yellow Orb
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

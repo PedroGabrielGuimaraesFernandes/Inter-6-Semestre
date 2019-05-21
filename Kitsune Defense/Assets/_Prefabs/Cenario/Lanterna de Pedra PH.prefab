@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1288136323341732630}
   - component: {fileID: 1288136323341732629}
   - component: {fileID: 1288136323341732628}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -404,9 +404,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1288136323543443551}
   - component: {fileID: 1288136323543443550}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Lanterna de Pedra PH
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
