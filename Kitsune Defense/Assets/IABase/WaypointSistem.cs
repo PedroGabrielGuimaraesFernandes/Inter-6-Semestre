@@ -57,7 +57,9 @@ public class WaypointSistem : MonoBehaviour
         else if (IA.NavAgent.remainingDistance <= 0.5)
         {
             trigger = true;
-            WayPointIndex++;
+            if (WayPointIndex <= WayPoints.Length-1) {
+                WayPointIndex++;
+            }
         }   
     }
 }
