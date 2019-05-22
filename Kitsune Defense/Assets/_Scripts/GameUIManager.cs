@@ -27,6 +27,7 @@ public class GameUIManager : MonoBehaviour
     void Start()
     {
         riceCheck = gameObject.GetComponent<RiceGain>();
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
         MainData.wonLevel = false;
         victoryCanvas.SetActive(false);
         defeatCanvas.SetActive(false);

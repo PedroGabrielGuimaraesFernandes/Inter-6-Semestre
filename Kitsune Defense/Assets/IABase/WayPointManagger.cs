@@ -15,13 +15,15 @@ public class WayPointManagger : MonoBehaviour
     
     public void Update()
     {
-        if (Spawn.waves[Spawn.CurrentWave].useSpawnPoint1)
-        {
-            SpawnPoint = 2;
-        }
-        else
-        {
-            SpawnPoint = 1;
+        if (Spawn.CurrentWave > 0 && Spawn.CurrentWave < Spawn.waves.Length) {
+            if (Spawn.waves[Spawn.CurrentWave - 1].useSpawnPoint1)
+            {
+                SpawnPoint = 2;
+            }
+            else
+            {
+                SpawnPoint = 1;
+            }
         }
     }
 }
