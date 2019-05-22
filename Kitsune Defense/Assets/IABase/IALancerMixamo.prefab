@@ -729,6 +729,7 @@ MonoBehaviour:
   PlayerManagerScript: {fileID: 0}
   ObjctiveManagerScript: {fileID: 0}
   AtkBool: 0
+  wayPointSistem: {fileID: 0}
 --- !u!114 &4312802149273409305
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -742,7 +743,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WayPoints: []
-  RandonRange: 5
+  RandonRange: 2
 --- !u!136 &5566705351347587592
 CapsuleCollider:
   m_ObjectHideFlags: 0
