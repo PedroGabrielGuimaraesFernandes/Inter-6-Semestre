@@ -33,6 +33,7 @@ public class IAMelee : IABase
         if (Objective != null)
         {
             float Distance = Vector3.Distance(transform.position, Objective.transform.position);
+
             if (NavAgent.velocity.sqrMagnitude < 0)
             {
                 ActualState = States.Idle;

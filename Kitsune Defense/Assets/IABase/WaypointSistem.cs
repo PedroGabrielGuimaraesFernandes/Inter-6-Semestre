@@ -38,7 +38,6 @@ public class WaypointSistem : MonoBehaviour
             }
         }
     }
-
     public void MoveToObjective()
     {
         Vector3 newpos;
@@ -57,7 +56,7 @@ public class WaypointSistem : MonoBehaviour
         else if (IA.NavAgent.remainingDistance <= 0.5)
         {
             trigger = true;
-            if (WayPointIndex <= WayPoints.Length-1) {
+            if (WayPointIndex <= WayPoints.Length) {
                 WayPointIndex++;
             }
         }   

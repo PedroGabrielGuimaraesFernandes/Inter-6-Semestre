@@ -87,7 +87,8 @@ public class IABase : MonoBehaviour
     public void EnterInObjective()
     {
         float Distance = Vector3.Distance(transform.position, MainObjective.transform.position);
-        if (Distance <= 5)
+
+        if (Distance <= 7)
         {
             SpawnControl.AllKilledEnemies++;
             Destroy(gameObject);
