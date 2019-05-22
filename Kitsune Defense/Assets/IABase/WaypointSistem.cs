@@ -24,7 +24,7 @@ public class WaypointSistem : MonoBehaviour
         if (Manager.SpawnPoint == 1)
         {
             WayPoints = new GameObject[Manager.dimensionWay1];
-            for (int i = 0; i <= WayPoints.Length; i++)
+            for (int i = 0; i < WayPoints.Length; i++)
             {
                 WayPoints[i] = Manager.totalWayPoints[i + Manager.IndexWay1[0]];
             }
@@ -32,7 +32,7 @@ public class WaypointSistem : MonoBehaviour
         else if(Manager.SpawnPoint == 2)
         {
             WayPoints = new GameObject[Manager.dimensionWay2];
-            for (int i = 0; i <= WayPoints.Length; i++)
+            for (int i = 0; i < WayPoints.Length; i++)
             {
                 WayPoints[i] = Manager.totalWayPoints[i + Manager.IndexWay2[0]];
             }

@@ -45,8 +45,15 @@ public class IABase : MonoBehaviour
     }
     public void GoObjective()
     {
-        //NavAgent.SetDestination(Objective.transform.position);
-        wayPointSistem.MoveToObjective();
+        if (Objective == PlayerObj)
+        {
+            NavAgent.SetDestination(PlayerObj.transform.position);
+        }
+        else
+        {
+            wayPointSistem.MoveToObjective();
+        }
+
         Anim.SetBool("Moving", true);
         NavAgent.isStopped = false;
     }
@@ -65,6 +72,7 @@ public class IABase : MonoBehaviour
     public void CheckForPlayer(float RangeDetection)
     {
        float Distance = Vector3.Distance(transform.position, PlayerObj.transform.position);
+
        if (Distance <= RangeDetection)
        {
             Objective = PlayerObj;
@@ -91,9 +99,11 @@ public class IABase : MonoBehaviour
         if (Distance <= 7)
         {
             SpawnControl.AllKilledEnemies++;
+            SpawnControl.CurrentEnemyNumber--;
+            ObjctiveManagerScript.Damage(1f);
             Destroy(gameObject);
             return;
-        }
+        }      
     }
     public void TakeDamage(float damage)
     {

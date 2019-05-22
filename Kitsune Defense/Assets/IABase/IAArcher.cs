@@ -36,7 +36,8 @@ public class IAArcher : IABase
         CheckForPlayer(CheckDistance);
         if (Objective != null)
         {
-            float Distance = Vector3.Distance(transform.position, Objective.transform.position);
+            float Distance = Vector3.Distance(transform.position, PlayerObj.transform.position);
+
             if (NavAgent.velocity.sqrMagnitude < 0)
             {
                 ActualState = States.Idle;
