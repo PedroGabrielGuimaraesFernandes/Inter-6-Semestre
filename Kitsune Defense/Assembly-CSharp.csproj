@@ -79,6 +79,7 @@
     <Compile Include="Assets\_Scripts\Menus\PlayerPrefsX.cs" />
     <Compile Include="Assets\_Scripts\Menus\Sound.cs" />
     <Compile Include="Assets\_Scripts\Menus\Upgrade\IndividualUpgrades.cs" />
+    <Compile Include="Assets\_Scripts\Menus\Upgrade\UpgradeMainMenu.cs" />
     <Compile Include="Assets\_Scripts\Menus\Upgrade\UpgradeManager.cs" />
     <Compile Include="Assets\_Scripts\NewBehaviourScript.cs" />
     <Compile Include="Assets\_Scripts\PathFindingAStar.cs" />

@@ -69,9 +69,10 @@ public class ProjectileTrap : Trap
             shootPosition[r].Emit(1);
             r++;
             //Debug.Log("Particule System" + r + "para i num" + r);
-            yield return new WaitForSeconds(0.1f);
+            //yield return new WaitForSeconds(0.1f);
 
         }
+        yield return new WaitForSeconds(0.1f);
         ReloadTrap(reloadTime);
     }
 

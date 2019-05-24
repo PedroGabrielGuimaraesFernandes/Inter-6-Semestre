@@ -116,7 +116,7 @@ public class UpgradeManager : MonoBehaviour
         if (MainData.canUseTrap[trapid] == 1)
         {
             upgradeInformation.SetActive(false);
-            upgradeObject.SetActive(true);
+            upgradeObject.SetActive(false);
         }
     }
 
