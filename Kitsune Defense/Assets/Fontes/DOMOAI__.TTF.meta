@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 589d671bd3bdbab4498c2bd161283b9e
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: DomoAregato
+  fontNames:
+  - DomoAregato
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 0d02e220a3525714b90aa64b78482ae3, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
