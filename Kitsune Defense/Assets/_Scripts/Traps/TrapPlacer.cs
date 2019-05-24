@@ -159,7 +159,7 @@ public class TrapPlacer : MonoBehaviour
                             Destroy(previewTrap);
                             return;
                         }
-                        if(hitColliders[t].tag == "Trap" && isWaitingNextWave ==true)
+                        if(hitColliders[t].tag == "Trap" && isWaitingNextWave == true)
                         {
                             gameUIManager.UpdatePlaceTrapText("Press 'Q' To sell trap");
                             if (Input.GetKeyDown(KeyCode.Q))

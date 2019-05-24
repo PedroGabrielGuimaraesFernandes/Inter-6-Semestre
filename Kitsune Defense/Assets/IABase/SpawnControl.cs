@@ -93,11 +93,14 @@ public class SpawnControl : MonoBehaviour
         {
             Debug.Log("First wave");
             gameUIManager.WavesBegan();
+            MainData.waitingNextWave = false;
+            gameUIManager.UpdatePlaceTrapText("");
             StartCoroutine(SpawnCorroutine(0));
         }
     }
     public IEnumerator SpawnCorroutine(int onda)
     {
+        //gameUIManager.UpdatePlaceTrapText("");
         GameObject Enemy;
        /* if (waves[onda].useSpawnPoint1)
         {
@@ -161,6 +164,7 @@ public class SpawnControl : MonoBehaviour
                 yield return new WaitForSeconds(Time);
         }
         MainData.waitingNextWave = false;
+        gameUIManager.UpdatePlaceTrapText("");
         spawningWave = false;
         lancerNumber = 0;
         archerNumber = 0;

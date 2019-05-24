@@ -32,24 +32,29 @@ public class IAMelee : IABase
         CheckForPlayer(CheckDistance);
         if (Objective != null)
         {
+            //Debug.Log(NavAgent.isStopped);
             float Distance = Vector3.Distance(transform.position, Objective.transform.position);
 
             if (NavAgent.velocity.sqrMagnitude < 0)
             {
+                Debug.Log("Idle");
                 ActualState = States.Idle;
             }
             else if (Distance <= dToAttack)
             {
+                Debug.Log("Battle");
                 ActualState = States.Battle;
                 LookAtLerp(Objective);
             }
-            else
+            else /*if(AtkBool)*/
             {
+                Debug.Log("GoObjective");
                 ActualState = States.GoObjective;
             }
         }
         else
         {
+            Debug.Log("Idle");
             ActualState = States.Idle;
         }
         if (hp <= 0)
