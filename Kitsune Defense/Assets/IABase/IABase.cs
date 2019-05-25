@@ -10,7 +10,7 @@ public class IABase : MonoBehaviour
     public float Damage;
     public float WaitToAttack;
     public GameObject redSpirit;
-    public float CheckDistance;
+    public float ChaseDistance;
     public float MoveSpeed;
 
     [HideInInspector] public GameObject Objective;
@@ -57,29 +57,22 @@ public class IABase : MonoBehaviour
         Anim.SetBool("Moving", true);
         NavAgent.isStopped = false;
     }
+    public void ChasePlayer()
+    {
+        NavAgent.SetDestination(PlayerObj.transform.position);
+        Anim.SetBool("Attack", false);
+        NavAgent.isStopped = false;
+    }
     public IEnumerator AttackCorroutine()
     {
-        Anim.SetBool("Moving", false);
         if (!AtkBool)
         {
             AtkBool = true;         
-            Anim.SetTrigger("Attack");
+            Anim.SetBool("Attack",true);
             NavAgent.isStopped = true; 
             yield return new WaitForSeconds(WaitToAttack);
+            Anim.SetBool("Attack", false);
             AtkBool = false;
-        }
-    }
-    public void CheckForPlayer(float RangeDetection)
-    {
-       float Distance = Vector3.Distance(transform.position, PlayerObj.transform.position);
-
-       if (Distance <= RangeDetection)
-       {
-            Objective = PlayerObj;
-       }
-        else
-        {
-            Objective = MainObjective;
         }
     }
     public void Death()

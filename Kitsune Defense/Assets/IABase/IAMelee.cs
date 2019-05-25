@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class IAMelee : IABase
 {
-    enum States { Idle, GoObjective, Battle };
+    enum States { Idle, GoObjective, Battle,Chase};
     States ActualState;
 
     // Start is called before the first frame update
@@ -28,29 +28,29 @@ public class IAMelee : IABase
             case States.Battle:
                 StartCoroutine(AttackCorroutine());
                 break;
+            case States.Chase:
+                ChasePlayer();
+                break;
         }
-        CheckForPlayer(CheckDistance);
+
         if (Objective != null)
         {
-            //Debug.Log(NavAgent.isStopped);
-            float Distance = Vector3.Distance(transform.position, Objective.transform.position);
+            float Distance = Vector3.Distance(transform.position, PlayerObj.transform.position);
 
-            if (NavAgent.velocity.sqrMagnitude < 0)
+            if (Distance <= dToAttack)
             {
-                Debug.Log("Idle");
-                ActualState = States.Idle;
-            }
-            else if (Distance <= dToAttack)
-            {
-                Debug.Log("Battle");
                 ActualState = States.Battle;
-                LookAtLerp(Objective);
+                LookAtLerp(PlayerObj);
             }
-            else /*if(AtkBool)*/
+            else if(Distance<=ChaseDistance)
             {
-                Debug.Log("GoObjective");
+                ActualState = States.Chase;
+            }
+            else
+            {
                 ActualState = States.GoObjective;
             }
+            Debug.Log(ActualState);
         }
         else
         {

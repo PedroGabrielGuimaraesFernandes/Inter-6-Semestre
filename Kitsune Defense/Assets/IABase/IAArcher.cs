@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class IAArcher : IABase
 {
-    enum States { Idle, GoObjective, Battle };
+    enum States { Idle, GoObjective, Battle,Chase};
     States ActualState;
 
     //public GameObject ArrowObject;
@@ -32,25 +32,29 @@ public class IAArcher : IABase
             case States.Battle:
                 StartCoroutine(AttackCorroutine());
                 break;
+            case States.Chase:
+                ChasePlayer();
+                break;
         }
-        CheckForPlayer(CheckDistance);
+        //CheckForPlayer(CheckDistance);
         if (Objective != null)
         {
             float Distance = Vector3.Distance(transform.position, PlayerObj.transform.position);
 
-            if (NavAgent.velocity.sqrMagnitude < 0)
-            {
-                ActualState = States.Idle;
-            }
-            else if (Distance <= dToAttack)
+            if (Distance <= dToAttack)
             {
                 ActualState = States.Battle;
                 LookAtLerp(Objective);
+            }
+            else if (Distance <= ChaseDistance)
+            {
+                ActualState = States.Chase;
             }
             else
             {
                 ActualState = States.GoObjective;
             }
+            Debug.Log(ActualState);
         }
         else
         {
