@@ -69,6 +69,7 @@ public class IABase : MonoBehaviour
         {
             AtkBool = true;         
             Anim.SetBool("Attack",true);
+            Anim.SetBool("Moving", false);
             NavAgent.isStopped = true; 
             yield return new WaitForSeconds(WaitToAttack);
             Anim.SetBool("Attack", false);

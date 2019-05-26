@@ -2293,13 +2293,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee55315b50483ba4d92e6741049204fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dToAttack: 15
+  dToAttack: 10
   hp: 5
   Damage: 4
   WaitToAttack: 5
   redSpirit: {fileID: 409007291138270811, guid: c8bb8ca9030d7634e911b1d9232c9232,
     type: 3}
-  CheckDistance: 10
+  ChaseDistance: 15
   MoveSpeed: 4
   Objective: {fileID: 0}
   NavAgent: {fileID: 0}

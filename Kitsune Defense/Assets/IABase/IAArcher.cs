@@ -36,7 +36,7 @@ public class IAArcher : IABase
                 ChasePlayer();
                 break;
         }
-        //CheckForPlayer(CheckDistance);
+
         if (Objective != null)
         {
             float Distance = Vector3.Distance(transform.position, PlayerObj.transform.position);
@@ -44,7 +44,7 @@ public class IAArcher : IABase
             if (Distance <= dToAttack)
             {
                 ActualState = States.Battle;
-                LookAtLerp(Objective);
+                LookAtLerp(PlayerObj);
             }
             else if (Distance <= ChaseDistance)
             {
@@ -58,6 +58,7 @@ public class IAArcher : IABase
         }
         else
         {
+            Debug.Log("Idle");
             ActualState = States.Idle;
         }
         if (hp <= 0)
