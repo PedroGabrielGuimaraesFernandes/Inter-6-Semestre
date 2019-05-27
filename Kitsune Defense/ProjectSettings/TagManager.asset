@@ -22,6 +22,8 @@ TagManager:
   - wayManager
   - Red Orb
   - Orb
+  - Dialogue
+  - Spawn
   layers:
   - Default
   - TransparentFX

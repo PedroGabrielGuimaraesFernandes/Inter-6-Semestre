@@ -158,13 +158,19 @@ public class SpawnControl : MonoBehaviour
                     CurrentEnemyNumber++;
                     samuraiNumber++;
                 }
+
+                if((samuraiNumber > 0 || archerNumber > 0 || lancerNumber > 0) && CurrentEnemyNumber == 0)
+                {
+                    waves[onda].totalQuantity = 0;
+                }
+
             }
 
 
                 yield return new WaitForSeconds(Time);
         }
         MainData.waitingNextWave = false;
-        gameUIManager.UpdatePlaceTrapText("");
+        //gameUIManager.UpdatePlaceTrapText("");
         spawningWave = false;
         lancerNumber = 0;
         archerNumber = 0;

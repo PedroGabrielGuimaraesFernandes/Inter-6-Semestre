@@ -1,0 +1,118 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1078733575204833587
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7626226242496790147}
+  - component: {fileID: 5837395208028294495}
+  - component: {fileID: 4710264975859758723}
+  m_Layer: 0
+  m_Name: DialogueManager 2
+  m_TagString: Dialogue
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7626226242496790147
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1078733575204833587}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -35.4, y: 0, z: -111.2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5837395208028294495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1078733575204833587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8fd5903b0a6ada4fb100a8b6946ecae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameText: {fileID: 0}
+  dialogueText: {fileID: 0}
+  inDialogue: 0
+  talkinPerson: 0
+  persont: 0000000000000000000000000000000000000000
+  person1: {fileID: 0}
+  person2: {fileID: 0}
+  gameCanvas: {fileID: 0}
+  stopPlayer: 0
+  contandoHistoria: 0
+  dialogue:
+  - name: Fase1 Dialogo1
+    personTalkin: 00000000
+    sentences:
+    - "Kutabarooooo! Eu vou destruir todos voc\xEAs!"
+  - name: Fase1 Dialogo2
+    personTalkin: 00000000
+    sentences:
+    - "Preciso ser rapida, Kaede est\xE1 sozinha no castelo."
+  - name: Fase2 Dialogo1
+    personTalkin: 00000000
+    sentences:
+    - "Maldi\xE7\xE3o, parece que j\xE1 houve uma batalha aqui. Tenho que defender
+      o portal para o castelo onde Kaede est\xE1 de vinda de mais inimigos."
+  - name: Fase2 Dialogo2
+    personTalkin: 00000000
+    sentences:
+    - "Droga, agora eles est\xE3o querendo atacar os armaz\xE9ns tamb\xE9m! Tenho
+      que defende-lo temb\xE9m ou mesmo que eu ganhe essa batalha os moradores do
+      castelo perecer\xE3o no p\xF3s-guerra."
+  - name: Fase2 Dialogo3
+    personTalkin: 00000000
+    sentences:
+    - "Eu vou destruir todo o cl\xE3 ichimonji nem que isso seja a \xFAltima coisa
+      que eu fa\xE7a."
+  - name: Fase3 Dialogo1
+    personTalkin: 00000000
+    sentences:
+    - "Quase l\xE1, s\xF3 preciso aquentar mais um pouco."
+  - name: Fase3 Dialogo2
+    personTalkin: 00000000
+    sentences:
+    - "Parece que esses s\xE3o os ultimos deles, fique calma kaede."
+  - name: Fase3 Dialogo3
+    personTalkin: 0000000000000000
+    sentences:
+    - "Ichimonji amaldi\xE7oo seu cl\xE3 com o que tem de poir."
+    - "Quando seu apice chegar e seu poder se dividei ent\xE3o sera ai que seu cl\xE3
+      ira sucumbir."
+--- !u!114 &4710264975859758723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1078733575204833587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96b1a331065ea564fb9675f86d60bfc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueManager: {fileID: 0}
+  spawnControl: {fileID: 0}
+  triggerWave: 000000000200000005000000
+  dialogueToCall:
+  - Fase2 Dialogo1
+  - Fase2 Dialogo2
+  - Fase2 Dialogo3
+  numDialog: 0
+  stopPlayer: 0
+  dialogueIndex: 0
+  waveDialogueReaded: 0

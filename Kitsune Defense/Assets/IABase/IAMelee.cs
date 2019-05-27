@@ -50,11 +50,11 @@ public class IAMelee : IABase
             {
                 ActualState = States.GoObjective;
             }
-            Debug.Log(ActualState);
+//            Debug.Log(ActualState);
         }
         else
         {
-            Debug.Log("Idle");
+  //          Debug.Log("Idle");
             ActualState = States.Idle;
         }
         if (hp <= 0)
@@ -69,13 +69,7 @@ public class IAMelee : IABase
     }
     public void DealDamage()
     {
-        if (Objective == MainObjective)
-        {
-            ObjctiveManagerScript.Damage(Damage);
-        }
-        else
-        {
             PlayerManagerScript.Damage(Damage);
-        }
+        
     }
 }
