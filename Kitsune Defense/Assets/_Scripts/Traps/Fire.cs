@@ -5,10 +5,7 @@ using UnityEngine;
 public class Fire : MonoBehaviour
 {
 
-    public ParticleSystem fireAlpha;
-    public ParticleSystem fireAdd;
-    public ParticleSystem glow;
-    public ParticleSystem sparks;
+    
     
 
     // Start is called before the first frame update
@@ -26,7 +23,7 @@ public class Fire : MonoBehaviour
     {
         if (other.CompareTag("Enemy"))
         {
-            fireAlpha.emission.SetBurst(10,fireAlpha.emission.GetBurst(0)) ;
+            //fireAlpha.emission.SetBurst(10,fireAlpha.emission.GetBurst(0)) ;
 
             Debug.Log("Particula Colidiu");
             IABase enemyScript = other.GetComponent<IABase>();

@@ -15,13 +15,13 @@ public class MainData
     public static int arrozTotal;
     public static int[] levelStatus = { 1, 0, 0, 0, 0};
     //0 - SpikeTrap, 1 - ProjectileTrap, 2 - SlowTrap.
-    public static int[] canUseTrap = { 1, 1, 0 };
+    public static int[] canUseTrap = { 1, 1, 0 ,0};
     //Array para guardar o arroz coletado por fase
     public static int[] arrozInLevel = { 0, 0, 0, 0, 0};
     //Array para guardar os upgrades
-    public static int[] upgrades = { 0, 0, 0};
+    public static int[] upgrades = { 0, 0, 0, 0};
     // Array com as descrições das traps
-    public static string[] trapDescription = {"Espinhos de bambu que saem do chão para causar dano aos inimigos", "Lança kunais que causam dano nos inimigos nos inimigos(causa dano por projetil)", "Inimigos se movem mais lentamente enquanto pisam na trap"  };
+    public static string[] trapDescription = {"Espinhos de bambu que saem do chão para causar dano aos inimigos", "Lança kunais que causam dano nos inimigos nos inimigos(causa dano por projetil)", "Inimigos se movem mais lentamente enquanto pisam na trap", "Uma armadilha poderosa que usa um lança chamas para queirmar seus inimigos"  };
 
 
     //funções principais
@@ -58,7 +58,7 @@ public class MainData
         }
         else
         {
-            canUseTrap = new int[] { 1, 1, 0};
+            canUseTrap = new int[] { 1, 1, 0 ,0};
         }
 
         if (PlayerPrefs.HasKey("arrozInLevel"))
@@ -76,7 +76,7 @@ public class MainData
         }
         else
         {
-            upgrades = new int[] { 0, 0, 0 };
+            upgrades = new int[] { 0, 0, 0 , 0};
         }
     }
 

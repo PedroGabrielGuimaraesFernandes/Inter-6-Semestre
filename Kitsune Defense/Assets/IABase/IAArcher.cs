@@ -84,13 +84,6 @@ public class IAArcher : IABase
 
     public void DealDamage()
     {
-        if (Objective == MainObjective)
-        {
-            ObjctiveManagerScript.Damage(Damage);
-        }
-        else
-        {
             PlayerManagerScript.Damage(Damage);
-        }
     }
 }

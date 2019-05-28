@@ -113,11 +113,11 @@ public class UpgradeManager : MonoBehaviour
 
     public void DeactivateCostAndGain(int trapid)
     {
-        if (MainData.canUseTrap[trapid] == 1)
-        {
+        //if (MainData.canUseTrap[trapid] == 1)
+        //{
             upgradeInformation.SetActive(false);
             upgradeObject.SetActive(false);
-        }
+        //}
     }
 
     public void CheckIfUnlocked(int trapid)

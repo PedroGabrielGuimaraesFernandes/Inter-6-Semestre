@@ -39,6 +39,13 @@ public class LevelManager : MonoBehaviour {
         Application.Quit();
     }
 
+    public void UnlockLevel(int index)
+    {
+        MainData.levelStatus[index] = 1;
+        MainData.SaveData();
+        print("Level unlocked " + (index + 1));
+    }
+
     public void ResetProgress()
     {
         MainData.ResetLevels();

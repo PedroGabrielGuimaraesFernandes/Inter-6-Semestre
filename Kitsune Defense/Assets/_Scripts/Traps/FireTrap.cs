@@ -5,7 +5,11 @@ using UnityEngine;
 public class FireTrap : Trap
 {
     public Transform reference;
-    public ParticleSystem shootPosition;
+    //public ParticleSystem[] shootPosition;
+    public ParticleSystem fireAlpha;
+    public ParticleSystem fireAdd;
+    public ParticleSystem glow;
+    public ParticleSystem sparks;
     public float maxNumShoot = 12;
 
     private int attackIndex;
@@ -23,7 +27,7 @@ public class FireTrap : Trap
 
     }
 
-    public void Shoot()
+    /*public void Shoot()
     {
         for (int i = 0; i < maxNumShoot; i++)
         {
@@ -32,7 +36,7 @@ public class FireTrap : Trap
             Debug.Log("Tentou atirar");
         }
         ReloadTrap(reloadTime);
-    }
+    }*/
 
     public void ReloadTrap(float tempo)
     {
@@ -52,7 +56,7 @@ public class FireTrap : Trap
             Debug.Log("viu inimigo");
             reloading = true;
             //Debug.Log("Kunai Trap Activated");
-            ShootFire();
+            StartCoroutine(ShootFire());
             //Shoot();
             //anim.SetTrigger(attackIndex);
         }
@@ -60,11 +64,51 @@ public class FireTrap : Trap
         CauseDamage(enemyScript);*/
     }
 
-    public void ShootFire()
+    /*public void ShootFire()
     {
-        shootPosition.Emit(1);
+        if (other.CompareTag("Enemy") && reloading == false)
+        {
+            reloading = true;
+
+            Debug.Log("Kunai Trap Activated");
+            StartCoroutine(ShootShuriken());
+            //Shoot();
+            //anim.SetTrigger(attackIndex);
+        }
+        /*shootPosition.emission.enabled = true;
+        ReloadTrap(reloadTime);*
+    }*/
+
+    public IEnumerator ShootFire()
+    {
+        int r = 0;
+        //vai se repetir a te dar o tempo do reload
+
+        /*for (int i = 0; i < shootPosition.Length ; i++)
+        {*/
+        //shootPosition[r].Play();
+        Debug.Log("fire Trap Activated");
+        fireAlpha.Play();
+        fireAdd.Play();
+        glow.Play();
+        sparks.Play();
+        //r++;
+        //}
+       
+        yield return new WaitForSeconds(5f);
+        /*for (int i = 0; i < shootPosition.Length; i++)
+        {*/
+        //shootPosition[r].Play();
+        Debug.Log("fire Trap Deactivated");
+        fireAlpha.Stop();
+            fireAdd.Stop();
+            glow.Stop();
+            sparks.Stop();  
+            r++;
+        //}
         ReloadTrap(reloadTime);
     }
+
 
     public IEnumerator ReloadTimer(float time)
     {
