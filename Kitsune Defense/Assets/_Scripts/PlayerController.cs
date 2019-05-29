@@ -28,11 +28,11 @@ public class PlayerController : MonoBehaviour
     [Range(0, 1f)]
     public float StopAnimTime = 0.15f;
 
-    //[Header("Itens Do Ataque")]
-    /*public Transform rangeEffectMuzzle;
-    public GameObject rangeAttackEffect;
-    public Rigidbody rangeAttackBall;
-    public Transform meleeEffectMuzzle;
+    [Header("Itens Do Ataque")]
+    public Transform magicAttackSpawn;
+    public GameObject magicAttackObject;
+    public Rigidbody magicAttackRigd;
+    /*public Transform meleeEffectMuzzle;
     public GameObject meleeAttackEffect;*/
 
     //[Header("Canvas de derrota")]
@@ -44,14 +44,15 @@ public class PlayerController : MonoBehaviour
     private int speedIndex;
     private int moveIndex;
     private int sprintIndex;
-    private int meleeAttackIndex;
-    private int rangeAttackIndex;
-    private int moveMeleeAttackIndex;
-    private int moveRangeAttackIndex;
-    private int jumpIndex;
-    private int damageIndex;
+    private int placeTrapIndex;
+    private int magicAttackIndex;
+    private int movePlaceTrapIndex;
+    private int moveMagicAttackIndex;
+    //private int jumpIndex;
+   // private int damageIndex;
     private int deadIndex;
     private bool canMove;
+    [SerializeField]
     private bool canAttack;
     private bool takeHit;
     private bool canDie;
@@ -69,12 +70,12 @@ public class PlayerController : MonoBehaviour
         speedIndex = Animator.StringToHash("speed");
         moveIndex = Animator.StringToHash("move");
         sprintIndex = Animator.StringToHash("sprint");
-        meleeAttackIndex = Animator.StringToHash("meleeAttack");
-        rangeAttackIndex = Animator.StringToHash("rangeAttack");
-        moveMeleeAttackIndex = Animator.StringToHash("moveMeleeAttack");
-        moveRangeAttackIndex = Animator.StringToHash("moveRangeAttack");
-        jumpIndex = Animator.StringToHash("jump");
-        damageIndex = Animator.StringToHash("damage");
+        placeTrapIndex = Animator.StringToHash("placeTrap");
+        magicAttackIndex = Animator.StringToHash("magicAttack");
+        movePlaceTrapIndex = Animator.StringToHash("movePlaceTrap");
+        moveMagicAttackIndex = Animator.StringToHash("moveMagicAttack");
+        //jumpIndex = Animator.StringToHash("jump");
+        //damageIndex = Animator.StringToHash("damage");
         deadIndex = Animator.StringToHash("dead");
         canMove = true;
         canAttack = true;
@@ -85,7 +86,15 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-            isPlacingTraps = MainData.placingTraps;
+        if (controller.isGrounded == false)
+        {
+            Vector3 moveVector = Physics.gravity;
+
+            controller.Move(moveVector * Time.deltaTime);
+
+        }
+
+        isPlacingTraps = MainData.placingTraps;
 
         if (canMove == true)
         {
@@ -108,11 +117,11 @@ public class PlayerController : MonoBehaviour
             PlayerMoveAndRotation();
         }
 
-        if (isPlacingTraps == false)
-        {
+        /*if (isPlacingTraps == false)
+        {*/
             //criar um void proprio para o ataque ou um script 
             VerifyAttack();
-        }
+        //}
     }
 
 
@@ -174,56 +183,49 @@ public class PlayerController : MonoBehaviour
     //Ataque
     public void VerifyAttack()
     {
-        if (Input.GetKeyDown(KeyCode.B) && canAttack)
+        if (Input.GetMouseButtonDown(0) && canAttack)
         {
+            Debug.Log("Era pra ataca");
             if (speed != 0.0f)
             {
                 anim.SetLayerWeight(1, 1.0f);
-                anim.SetTrigger(moveMeleeAttackIndex);
+                anim.SetTrigger(moveMagicAttackIndex);
                 canAttack = false;
             }
             else
             {
-                anim.SetTrigger(meleeAttackIndex);
+                anim.SetTrigger(magicAttackIndex);
                 canAttack = false;
             }
             takeHit = false;
         }
+    }
 
-        if (Input.GetKeyDown(KeyCode.V) && canAttack)
-        {
-            if (speed != 0.0f)
-            {
-                anim.SetLayerWeight(1, 1.0f);
-                anim.SetTrigger(moveRangeAttackIndex);
-                canAttack = false;
-            }
-            else
-            {
-                anim.SetTrigger(rangeAttackIndex);
-                canAttack = false;
-            }
-            takeHit = false;
-        }
+    public void ShowPlacingTrap()
+    {
+           if (speed != 0.0f)
+           {
+               anim.SetLayerWeight(1, 1.0f);
+               anim.SetTrigger(movePlaceTrapIndex);
+               canAttack = false;
+           }
+           else
+           {
+               anim.SetTrigger(placeTrapIndex);
+               canAttack = false;
+           }
+           takeHit = false;
     }
 
     public void CreateAttackEffect()
     {
-        /*var pos = rangeEffectMuzzle.position;
-        var rot = gameObject.transform.rotation;
+        var pos = magicAttackSpawn.position;
+        //ar rot = gameObject.transform.rotation;
 
-        Instantiate(rangeAttackEffect, pos, rot);
-        var b = Instantiate(rangeAttackBall, pos, rot) /*as Rigidbody/;
-        b.AddForce(rangeEffectMuzzle.forward * 500);*/
-    }
+        //Instantiate(magicAttackObject, pos, Quaternion.identity/*rot*/);
 
-    public void FirePunch()
-    {
-        /*var pos = meleeEffectMuzzle.position;
-        var rot = meleeEffectMuzzle.rotation;
-
-        Instantiate(meleeAttackEffect, pos, rot);
-        //var b = Instantiate(meleeAttackBall, pos, rot)/* as Rigidbody*;*/
+        var b = Instantiate(magicAttackRigd, pos, magicAttackSpawn.rotation) /*rot*/ as Rigidbody;
+        b.AddForce(magicAttackSpawn.forward * 500);
     }
 
     public void AllowMovement()

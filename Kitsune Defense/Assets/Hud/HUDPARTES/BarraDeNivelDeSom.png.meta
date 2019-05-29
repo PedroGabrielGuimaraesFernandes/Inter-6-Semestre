@@ -3,6 +3,11 @@ guid: 24215f52aad76fc469762d478af9c0eb
 TextureImporter:
   fileIDToRecycleName:
     21300000: BarraDeNivelDeSom_0
+    21300002: BarraDeNivelDeSom_1
+    21300004: BarraDeNivelDeSom_2
+    21300006: BarraDeNivelDeSom_3
+    21300008: BarraDeNivelDeSom_4
+    21300010: BarraDeNivelDeSom_5
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -99,10 +104,10 @@ TextureImporter:
       name: BarraDeNivelDeSom_0
       rect:
         serializedVersion: 2
-        x: 33
-        y: 12
-        width: 387
-        height: 28
+        x: 26
+        y: 11
+        width: 400
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -110,7 +115,107 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9c9de3add0c390f4a8b109e4233d7937
+      spriteID: bf56524bb359ee2408125c3043eebdd1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BarraDeNivelDeSom_1
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 10
+        width: 398
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 730135f54aac0dc428ea7b450b34262a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BarraDeNivelDeSom_2
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 11
+        width: 395
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 971ac50ce32f5874594ce8de94339137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BarraDeNivelDeSom_3
+      rect:
+        serializedVersion: 2
+        x: 1340
+        y: 11
+        width: 400
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28bf95ebacdaf1f45a9fb40a990c488d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BarraDeNivelDeSom_4
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 10
+        width: 397
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c550fb9fd2823a741b253a7d9b50387b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BarraDeNivelDeSom_5
+      rect:
+        serializedVersion: 2
+        x: 2218
+        y: 11
+        width: 395
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 789189d6cae1c1f49a9ce8df59b4d7c3
       vertices: []
       indices: 
       edges: []

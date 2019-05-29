@@ -34,6 +34,7 @@ public class TrapPlacer : MonoBehaviour
     public Slider selectedTrapImage;
     public Text costText;
 
+    private PlayerController playerController;
     private bool selectedTrapHorizontal;
     private bool selectedTrapVertical;
     private int usingTrap = -1;
@@ -47,7 +48,8 @@ public class TrapPlacer : MonoBehaviour
         MainData.placingTraps = true;
         isPlacingTraps = MainData.placingTraps;
         gameUIManager = GameObject.FindGameObjectWithTag("UIManager").GetComponent<GameUIManager>();
-        playerFunds = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerFunds>();
+        playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+        playerFunds = playerController.GetComponent<PlayerFunds>();
         costText.text = (traps[selectedTrap].cost - traps[selectedTrap].modCost * MainData.upgrades[traps[selectedTrap].trapID]).ToString();
         lateralHitInfo = new RaycastHit[4];
         Cursor.visible = false;
@@ -57,7 +59,8 @@ public class TrapPlacer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        custo = traps[selectedTrap].cost - (traps[selectedTrap].modCost * MainData.upgrades[traps[selectedTrap].trapID]);
+
+         custo = traps[selectedTrap].cost - (traps[selectedTrap].modCost * MainData.upgrades[traps[selectedTrap].trapID]);
         isPlacingTraps = MainData.placingTraps;
         isWaitingNextWave = MainData.waitingNextWave;
 
@@ -91,6 +94,7 @@ public class TrapPlacer : MonoBehaviour
                         funds -= custo;
                         playerFunds.AtualizarHud();
                         PlaceTrapNear(hitInfo.point);
+                        playerController.ShowPlacingTrap();
                     }
                 }
                 else
@@ -321,7 +325,7 @@ public class TrapPlacer : MonoBehaviour
 
     public void ChangeTraps()
     {
-        if (Input.GetAxisRaw("Mouse ScrollWheel") > 0 && selectedTrap < traps.Length - 1)
+        if (Input.GetAxisRaw("Mouse ScrollWheel") > 0 && selectedTrap < traps.Length -1)
         {
             selectedTrap += 1;
             selectedTrapImage.value = selectedTrap;

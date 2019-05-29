@@ -155,9 +155,9 @@ MonoBehaviour:
   reloadTime: 1
   cost: 35
   unlockCost: 100
-  modDamage: 0
+  modDamage: 5
   modReload: 0
-  modCost: 0
+  modCost: 5
   reference: {fileID: 4726526737021697538}
   fireAlpha: {fileID: 7115948673764827181}
   fireAdd: {fileID: 7115948673653040387}
