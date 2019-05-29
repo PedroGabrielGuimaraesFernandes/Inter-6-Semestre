@@ -155,6 +155,20 @@ public class PlayerController : MonoBehaviour
         {
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(desiredMoveDirection), desiredRotationSpeed);
         }
+        else if (blockRotationPlayer == true)
+        {
+            Vector3 ajusteRotation = cam.transform.rotation.eulerAngles;
+            if (ajusteRotation.x <= 0)
+            {
+                Quaternion novaRotação = Quaternion.Euler(ajusteRotation);
+                transform.rotation = novaRotação;
+            }
+            else
+            {
+                Quaternion novaRotação = Quaternion.Euler(0,ajusteRotation.y,0);
+                transform.rotation = novaRotação;
+            }
+        }
         anim.SetBool(sprintIndex, s);
     }
 
@@ -191,11 +205,13 @@ public class PlayerController : MonoBehaviour
                 anim.SetLayerWeight(1, 1.0f);
                 anim.SetTrigger(moveMagicAttackIndex);
                 canAttack = false;
+                blockRotationPlayer = true;
             }
             else
             {
                 anim.SetTrigger(magicAttackIndex);
                 canAttack = false;
+                blockRotationPlayer = true;
             }
             takeHit = false;
         }
@@ -233,6 +249,7 @@ public class PlayerController : MonoBehaviour
         anim.SetLayerWeight(1, 0.0f);
         canAttack = true;
         takeHit = true;
+        blockRotationPlayer = false;
     }
 
     public void EndOfLevel()

@@ -5305,6 +5305,21 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 25.1
       objectReference: {fileID: 0}
+    - target: {fileID: 4643932879175437454, guid: 2c43b1de285727c4a802c4bb5c866b5e,
+        type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 4643932879175437454, guid: 2c43b1de285727c4a802c4bb5c866b5e,
+        type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4643932879175437454, guid: 2c43b1de285727c4a802c4bb5c866b5e,
+        type: 3}
+      propertyPath: InitialModule.startSpeed.scalar
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 4643932879152744864, guid: 2c43b1de285727c4a802c4bb5c866b5e,
         type: 3}
       propertyPath: InitialModule.startLifetime.scalar
@@ -5339,21 +5354,6 @@ PrefabInstance:
         type: 3}
       propertyPath: InitialModule.startSizeZ.scalar
       value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 4643932879175437454, guid: 2c43b1de285727c4a802c4bb5c866b5e,
-        type: 3}
-      propertyPath: InitialModule.startSize.scalar
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 4643932879175437454, guid: 2c43b1de285727c4a802c4bb5c866b5e,
-        type: 3}
-      propertyPath: InitialModule.startLifetime.scalar
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 4643932879175437454, guid: 2c43b1de285727c4a802c4bb5c866b5e,
-        type: 3}
-      propertyPath: InitialModule.startSpeed.scalar
-      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 4643932879324032239, guid: 2c43b1de285727c4a802c4bb5c866b5e,
         type: 3}
@@ -13108,7 +13108,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -8.700012, y: 0.000061035156}
+  m_AnchoredPosition: {x: -8.700073, y: 0.000061035156}
   m_SizeDelta: {x: 17.4, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &7565055034909036457
@@ -13263,7 +13263,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -11, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -13482,7 +13482,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Start Game
+  m_Text: Jogar
 --- !u!222 &7565055035002017955
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -13780,7 +13780,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Yes
+  m_Text: Sim
 --- !u!222 &7565055035253890569
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -13848,8 +13848,8 @@ RectTransform:
   m_Father: {fileID: 7565055035944224526}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.525, y: 0}
+  m_AnchorMax: {x: 0.525, y: 1}
   m_AnchoredPosition: {x: 0, y: -0.00001335144}
   m_SizeDelta: {x: 53.1, y: 47.6}
   m_Pivot: {x: 0.50000006, y: 0.5}
@@ -14200,7 +14200,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -11, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -14500,7 +14500,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Music Volume
+  m_Text: Musica
 --- !u!222 &7565055035491979563
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -14579,7 +14579,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: How To Play
+  m_Text: Como Jogar
 --- !u!222 &7565055035492155525
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -15440,7 +15440,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: SFX Volume
+  m_Text: SFX
 --- !u!222 &7565055035870175965
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -15537,7 +15537,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &7565055035999689299
 RectTransform:
   m_ObjectHideFlags: 0
@@ -15621,7 +15621,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Quit Game
+  m_Text: Sair do Jogo
 --- !u!1 &7565055036054859013
 GameObject:
   m_ObjectHideFlags: 0
@@ -16101,7 +16101,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7565055036259174811
 RectTransform:
   m_ObjectHideFlags: 0
@@ -16189,7 +16189,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: No
+  m_Text: "N\xE3o"
 --- !u!1 &7565055036288335079
 GameObject:
   m_ObjectHideFlags: 0
@@ -16278,8 +16278,8 @@ RectTransform:
   m_Father: {fileID: 7565055034987395843}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 53.1, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -16895,7 +16895,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Game
+  m_Text: Novo Jogo
 --- !u!1 &7565055036474950533
 GameObject:
   m_ObjectHideFlags: 0
@@ -18023,7 +18023,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Continue Game
+  m_Text: Continuar jogo
 --- !u!222 &7565055036720188265
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -18197,7 +18197,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7565055036818643712
 RectTransform:
   m_ObjectHideFlags: 0
